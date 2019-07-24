@@ -7,7 +7,7 @@
   <%= text_field_tag :'employee[last_name]' %>
   <br>
   <label>Alias:</label>
-  <%= text_field_tag :'employee[alias]' %>
+  <%= text_field_tag(:'employee[alias]' ||  %>
   <br>
   <label>Title:</label>
   <%= text_field_tag :'employee[title]' %>
@@ -15,6 +15,9 @@
   <label>Office:</label>
   <%= text_field_tag :'employee[office]' %>
   <br>
+
+  <label>Dog:</label>
+  <%= collection_select(:employee, :dog_id, Dog.all, :id, :name) %>
 
 <%= submit_tag "Edit Employee" %>
 <% end %>

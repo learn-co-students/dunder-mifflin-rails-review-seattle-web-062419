@@ -23,6 +23,7 @@ class EmployeesController < ApplicationController
 
   def edit
     @employee = Employee.find(params[:id])
+    byebug
   end
 
   def update
