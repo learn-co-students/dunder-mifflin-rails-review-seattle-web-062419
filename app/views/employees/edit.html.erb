@@ -1,0 +1,22 @@
+<%= form_for @employee do |f| %>
+
+  <label>First name:</label>
+  <%= f.text_field :first_name %>
+  <br>
+  <label>Last name:</label>
+  <%= f.text_field :last_name %>
+  <br>
+  <label>Alias:</label>
+  <%= f.text_field :alias %>
+  <br>
+  <label>Title:</label>
+  <%= f.text_field :title %>
+  <br>
+  <label>Office:</label>
+  <%= f.text_field :office %>
+  <br>
+  <label>Dog:</label>
+  <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+
+<%= f.submit %>
+<% end %>
